@@ -1,0 +1,56 @@
+.loading {
+    width: 200px;
+    height: 50px;
+    margin: 20px auto;
+    position: relative
+}
+
+.loading span {
+    display: block;
+    position: absolute;
+	height: 10px;
+    width: 8px;
+    bottom: 0;
+    border-radius: 15%;
+	background-color: #5d84b0;
+    animation: pageLoading 1.6s infinite ease-in-out;
+   
+}
+
+.loading span:nth-of-type(2){
+    left: 11px; 
+    animation-delay: .2s;
+}
+.loading span:nth-of-type(3){
+    left: 22px; 
+    animation-delay: .4s;
+
+}
+.loading span:nth-of-type(4){
+    left: 33px; 
+     animation-delay: .6s;
+}
+.loading span:last-of-type{
+    left: 44px;
+     animation-delay: .8s;
+     animation-direction: reverse;
+}
+
+@keyframes pageLoading{
+    0%, 50%, 100%{
+        height: 5px;
+        transform: translateY(0);
+	    background-color: #24b1cc;
+        border-radius: 50%;
+        
+        
+        
+    }
+    25%{
+        height: 25px;
+	    background-color: #042e2f;
+        border-radius: 50%;
+        transform: rotate(95deg);
+        
+    }
+}
